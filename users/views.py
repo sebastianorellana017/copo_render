@@ -66,8 +66,8 @@ def complete_verification(request, key):
     except models.User.DoesNotExist:
         # to do: add error message
         pass
-    #return redirect(reverse("core:home"))
-    return redirect("core:home")
+    return redirect(reverse("core:home"))
+    #return redirect("core:home")
 
 
 def github_login(request):
