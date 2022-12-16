@@ -210,6 +210,9 @@ EMAIL_HOST_USER = os.environ.get("GMAIL_USERNAME")
 EMAIL_HOST_PASSWORD = os.environ.get("GMAIL_PASSWORD")
 EMAIL_FROM = "mariotorreslagos@gmail.com"
 
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Locale
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
