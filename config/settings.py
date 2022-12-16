@@ -188,6 +188,10 @@ if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
 AUTH_USER_MODEL = "users.User"
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
@@ -195,8 +199,8 @@ AUTH_USER_MODEL = "users.User"
 # Media
 # DEFAULT_FILE_STORAGE = "config.storages.S3DefaultStorage"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_URL = '/media/'
 
 # Auth
 
