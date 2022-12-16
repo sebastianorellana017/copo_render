@@ -173,17 +173,17 @@ AWS_DEFAULT_ACL = None
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-#STATIC_URL = "/static/"
+STATIC_URL = "/static/"
 
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
-    STATIC_URL = "/static/"
+    
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+    
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -195,9 +195,8 @@ AUTH_USER_MODEL = "users.User"
 # Media
 # DEFAULT_FILE_STORAGE = "config.storages.S3DefaultStorage"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Auth
 
